@@ -1,30 +1,51 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div id="app">
+    <header>
+      <h1>Numerical Methods Application</h1>
+    </header>
+    <main>
+      <router-view />
+    </main>
+  </div>
 </template>
 
-<style>
+<script>
+export default {
+  name: 'App',
+};
+</script>
+
+<style scoped>
+/* General styling for the app */
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-nav {
-  padding: 30px;
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+/* Remove any footer styling */
+footer {
+  display: none;
 }
 </style>
